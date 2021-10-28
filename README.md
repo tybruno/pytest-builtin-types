@@ -18,8 +18,9 @@ pytest-builtin-types gives you prebuilt builtin data types for testing your own 
 
 ### Basic Type
 ```python
-def test_example(float_1):
+def test_float_type(float_1, float_2):
     print(float_1) # 1.1
+    print(float_2) # 2.1
 ```
 ### Basic Types
 ```python
@@ -29,7 +30,7 @@ def test_basic_types(basic_types_1, basic_types_2):
 ```
 ### Basic Containers
 ```python
-def test_example(basic_containers_1):
+def test_container_types(basic_containers_1):
     print(basic_containers_1) 
     # {<class 'list'>: ['string1', 1, 1.1], <class 'tuple'>: ('string1', 1, 1.1), <class 'set'>: {1, 'string1', 1.1},
     # <class 'dict'>: {<class 'str'>: 'string1', <class 'int'>: 1, <class 'float'>: 1.1}}
