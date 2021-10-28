@@ -4,19 +4,31 @@ import pytest
 from typing import TypedDict, List, Tuple, Set, Dict, Union
 
 # Typing
-_BasicList = List[Union[str, int, float]]
-_BasicTuple = Tuple[Union[str, int, float]]
-_BasicSet = Set[Union[str, int, float]]
-_BasicTypes = TypedDict("_BasicTypes", {str: str, int: int, float: float})
+_BasicList = List[Union[str, int, float, bool]]
+_BasicTuple = Tuple[Union[str, int, float, bool]]
+_BasicSet = Set[Union[str, int, float, bool]]
+_BasicTypes = TypedDict("_BasicTypes", {str: str, int: int, float: float, bool: bool})
 _BasicContainers = TypedDict(
-    "_BasicContainers", {list: List, tuple: Tuple, set: Set, dict: Dict}
+    "_BasicContainers", {list: List, tuple: Tuple, set: Set, dict: Dict, bool: bool}
 )
 
 _AllBasicTypes = TypedDict(
     "_AllBasicTypes",
-    {str: str, int: int, float: float, list: List, tuple: Tuple, set: Set, dict: Dict},
+    {
+        str: str,
+        int: int,
+        float: float,
+        list: List,
+        tuple: Tuple,
+        set: Set,
+        dict: Dict,
+        bool: bool,
+    },
 )
 # Constants
+_BOOL_1: bool = True
+_BOOL_2: bool = False
+
 _FLOAT_1: float = 1.1
 _FLOAT_2: float = 1.2
 
@@ -29,8 +41,18 @@ _STRING_2: str = "string2"
 _MULTILINE_1: str = """Multiline1\nTest1\n\n"""
 _MULTILINE_2: str = """Multiline2\nTest2\n\n"""
 
-_BASIC_TYPES_1: _BasicTypes = {str: _STRING_1, int: _INT_1, float: _FLOAT_1}
-_BASIC_TYPES_2: _BasicTypes = {str: _STRING_2, int: _INT_2, float: _FLOAT_2}
+_BASIC_TYPES_1: _BasicTypes = {
+    str: _STRING_1,
+    int: _INT_1,
+    float: _FLOAT_1,
+    bool: _BOOL_1,
+}
+_BASIC_TYPES_2: _BasicTypes = {
+    str: _STRING_2,
+    int: _INT_2,
+    float: _FLOAT_2,
+    bool: _BOOL_2,
+}
 
 _LIST_1: _BasicList = list(value for value in _BASIC_TYPES_1.values())
 _LIST_2: _BasicList = list(value for value in _BASIC_TYPES_2.values())
