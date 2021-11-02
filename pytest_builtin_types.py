@@ -7,9 +7,12 @@ from typing import TypedDict, List, Tuple, Set, Dict, Union
 _BasicList = List[Union[str, int, float, bool]]
 _BasicTuple = Tuple[Union[str, int, float, bool]]
 _BasicSet = Set[Union[str, int, float, bool]]
-_BasicTypes = TypedDict("_BasicTypes", {str: str, int: int, float: float, bool: bool})
+_BasicTypes = TypedDict(
+    "_BasicTypes", {str: str, int: int, float: float, bool: bool}
+)
 _BasicContainers = TypedDict(
-    "_BasicContainers", {list: List, tuple: Tuple, set: Set, dict: Dict, bool: bool}
+    "_BasicContainers",
+    {list: List, tuple: Tuple, set: Set, dict: Dict, bool: bool},
 )
 
 _AllBasicTypes = TypedDict(
