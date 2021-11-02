@@ -180,18 +180,6 @@ def tuple_2() -> _BasicTuple:
 
 
 @pytest.fixture
-def basic_types_1() -> _BasicTypes:
-    """Returns a dictionary of basic types with values"""
-    return _BASIC_TYPES_1
-
-
-@pytest.fixture
-def basic_types_2() -> _BasicTypes:
-    """Returns a dictionary of basic types with values"""
-    return _BASIC_TYPES_2
-
-
-@pytest.fixture
 def basic_containers_1() -> _BasicContainers:
     """Returns a dictionary of basic containers with values"""
     return _BASIC_CONTAINERS_1
