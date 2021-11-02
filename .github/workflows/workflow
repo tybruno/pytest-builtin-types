@@ -1,3 +1,7 @@
+name: workflow
+
+on: push
+
 jobs;
   lint:
     uses: https://github.com/tybruno/pytest-builtin-types/blob/main/.github/workflows/lint.yml
