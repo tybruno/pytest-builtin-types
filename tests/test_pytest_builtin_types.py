@@ -91,7 +91,9 @@ def test_multiline_2(multiline_2: str) -> None:
     assert multiline_2 == _MULTILINE_2
 
 
-def test_basic_types(basic_types_1: _BasicTypes, basic_types_2: _BasicTypes) -> None:
+def test_basic_types(
+    basic_types_1: _BasicTypes, basic_types_2: _BasicTypes
+) -> None:
     assert basic_types_1 != basic_types_2
 
 
