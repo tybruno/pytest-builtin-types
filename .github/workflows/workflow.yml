@@ -5,5 +5,5 @@ on: push
 jobs:
   lint:
     uses: tybruno/pytest-builtin-types/.github/workflows/lint.yml@v1
-  test:
-    uses: tybruno/pytest-builtin-types/.github/workflows/test.yml@v1
+#   test:
+#     uses: tybruno/pytest-builtin-types/.github/workflows/test.yml@v1
