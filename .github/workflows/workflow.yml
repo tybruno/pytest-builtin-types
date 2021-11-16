@@ -7,3 +7,4 @@ jobs:
     uses: tybruno/pylama-workflow/.github/workflows/lint.yml@main
   test:
     uses: tybruno/pytest-builtin-types/.github/workflows/test.yml@main
+    
