@@ -2,8 +2,8 @@ name: workflow
 
 on: push
 
-jobs;
+jobs:
   lint:
-    uses: https://github.com/tybruno/pytest-builtin-types/blob/main/.github/workflows/lint.yml
+    uses: tybruno/pytest-builtin-types/.github/workflows/lint.yml
   test:
-    uses: https://github.com/tybruno/pytest-builtin-types/blob/main/.github/workflows/test 
+    uses: tybruno/pytest-builtin-types/.github/workflows/test.yml@v1
