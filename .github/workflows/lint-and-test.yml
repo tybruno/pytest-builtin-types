@@ -1,0 +1,7 @@
+name: lint-and-test
+
+on: push
+
+jobs:
+  lint-and-test:
+    uses: tybruno/github-workflow-lint-and-test/.github/workflows/lint-and-test.yml@main
