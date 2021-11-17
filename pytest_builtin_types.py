@@ -83,6 +83,23 @@ _ALL_BASIC_TYPES_1: _AllBasicTypes = {**_BASIC_TYPES_1, **_BASIC_CONTAINERS_1}
 _ALL_BASIC_TYPES_2: _AllBasicTypes = {**_BASIC_TYPES_2, **_BASIC_CONTAINERS_2}
 
 
+def create_not_instance_testing_data(dictionary):
+    testing_data = list()
+    for _type in dictionary.keys():
+        temp_dict = dictionary.copy()
+        temp_dict.pop(_type)
+
+        for obj in temp_dict.values():
+            testing_data.append((obj, _type))
+
+    return testing_data
+
+
+_NOT_INSTANCE_TESTING_DATA = create_not_instance_testing_data(
+    _ALL_BASIC_TYPES_1
+)
+
+
 def combined_equal_all_basic_types() -> tuple:
     """Combined tuple of all basic types"""
     combined_types: tuple = tuple(
