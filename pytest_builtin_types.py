@@ -83,7 +83,8 @@ _ALL_BASIC_TYPES_1: _AllBasicTypes = {**_BASIC_TYPES_1, **_BASIC_CONTAINERS_1}
 _ALL_BASIC_TYPES_2: _AllBasicTypes = {**_BASIC_TYPES_2, **_BASIC_CONTAINERS_2}
 
 
-def create_not_instance_testing_data(dictionary):
+def _create_non_instance_testing_data(dictionary):
+    """Create Non instance testing data"""
     testing_data = list()
     for _type in dictionary.keys():
         temp_dict = dictionary.copy()
@@ -95,7 +96,7 @@ def create_not_instance_testing_data(dictionary):
     return testing_data
 
 
-_NOT_INSTANCE_TESTING_DATA = create_not_instance_testing_data(
+_NOT_INSTANCE_TESTING_DATA = _create_non_instance_testing_data(
     _ALL_BASIC_TYPES_1
 )
 
