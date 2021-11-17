@@ -4,7 +4,7 @@ on: push
 
 jobs:
   lint:
-    uses: tybruno/pylama-github-workflow/.github/workflows/pylama-workflow.yml@main
+    uses: tybruno/github-workflow-pylama/.github/workflows/pylama-workflow.yml@main
   test:
-    uses: tybruno/pytest-github-workflow/.github/workflows/pytest-workflow.yml@main
+    uses: tybruno/github-workflow-pytest/.github/workflows/pytest-workflow.yml@main
     
