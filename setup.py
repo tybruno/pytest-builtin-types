@@ -13,4 +13,5 @@ setup(
     classifiers=["Framework :: Pytest"],
     python_requires=">= 3.6.0",
     install_requires=INSTALL_REQUIRES,
+    py_modules=["pytest_builtin_types"],
 )
