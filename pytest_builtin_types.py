@@ -83,8 +83,9 @@ _ALL_BASIC_TYPES_1: _AllBasicTypes = {**_BASIC_TYPES_1, **_BASIC_CONTAINERS_1}
 _ALL_BASIC_TYPES_2: _AllBasicTypes = {**_BASIC_TYPES_2, **_BASIC_CONTAINERS_2}
 
 
-def combined_equal_all_basic_types():
-    combined_types = tuple(
+def combined_equal_all_basic_types() -> tuple:
+    """Combined tuple of all basic types"""
+    combined_types: tuple = tuple(
         (value, value) for value in _ALL_BASIC_TYPES_1.values()
     )
 
@@ -92,6 +93,7 @@ def combined_equal_all_basic_types():
 
 
 def combined_non_equal_all_basic_types():
+    """Combined tuple of non equal basic types"""
     combined_types = tuple(
         (value1, value2)
         for value1, value2 in zip(
@@ -102,13 +104,15 @@ def combined_non_equal_all_basic_types():
 
 
 def equal_sequences():
+    """Equal sequences"""
     combined_sequences = (
         (sequence, sequence) for sequence in _BASIC_CONTAINERS_1.values()
     )
     return combined_sequences
 
 
-def not_equal_sequences():
+def non_equal_sequences():
+    """Non equal sequences"""
     combined_sequences = (
         (seq1, seq2)
         for seq1, seq2 in zip(
@@ -119,11 +123,13 @@ def not_equal_sequences():
 
 
 def equal_lists():
+    """Equal lists"""
     equal_list = (_BASIC_CONTAINERS_1[list], _BASIC_CONTAINERS_1[list])
     return equal_list
 
 
 def non_equal_list():
+    """Non equal lists"""
     equal_list = (_BASIC_CONTAINERS_1[list], _BASIC_CONTAINERS_2[list])
     return equal_list
 
