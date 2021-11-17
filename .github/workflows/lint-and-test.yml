@@ -1,7 +1,10 @@
-name: lint-and-test
+
+name: Lint and Test
 
 on: push
 
 jobs:
-  lint-and-test:
-    uses: tybruno/github-workflow-lint-and-test/.github/workflows/lint-and-test.yml@main
+  lint:
+    uses: tybruno/github-workflow-pylama/.github/workflows/pylama-workflow.yml@main
+  test:
+    uses: tybruno/github-workflow-pytest/.github/workflows/pytest-workflow.yml@main
